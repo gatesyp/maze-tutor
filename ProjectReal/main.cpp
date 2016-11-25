@@ -102,6 +102,17 @@ int getRandomRoom(int gameArray[5])
 
 }
 
+void placeGrail(int roomArray[][7], int gameArray[5]){
+    int randomRoom = getRandomRoom(gameArray[5]);
+    while(randomRoom < (MAX_ROOMS/2))
+    {
+        randomRoom = getRandomRoom(gameArray[5]);
+    }
+    roomArray[randomRoom][GRAIL_INDEX] = 1;
+
+}
+
+
 
 // build your functions here. Don't forget your pre and post conditions
 void reset(int &currentRoom, int &zombieRoom, int &numBullets, int &numRooms, bool &haveGrail)
