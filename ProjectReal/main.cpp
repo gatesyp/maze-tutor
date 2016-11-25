@@ -61,6 +61,7 @@ void placeGrail(int roomArray[][7], int gameArray[5]);
 // the setup function
 void setup(int &currentRoom, int &zombieRoom, int &numBullets, int &numRooms, bool &haveGrail, int roomArray[][7], int gameArray[5]);
 
+
 //PART 2 prototypes
 
 //PART 3 prototypes
@@ -89,7 +90,17 @@ int main()
 	return 0;
 }
 
+int getRandomRoom(int gameArray[5])
+{
+    // return number from 1 to MAX_ROOMS
+    int xRan;
+	srand( time(0));
 
+	xRan=rand()%MAX_ROOMS+1; // Randomizing the number between 1-15.
+	cout << "Shows a random number between 1-15: " << xRan;
+    return xRan;
+
+}
 
 
 // build your functions here. Don't forget your pre and post conditions
