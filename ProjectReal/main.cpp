@@ -67,8 +67,13 @@ bool checkZombie(int index, int roomArray[][7]);
 
 bool checkGrail(int index, int roomArray[][7]);
 
-bool checkNearZombie()
+bool checkNearZombie(int index, int roomArray[][7]);
+bool checkNearGrail(int index, int roomArray[][7]);
 //PART 3 prototypes
+
+
+
+
 
 int main()
 {
@@ -202,4 +207,15 @@ bool checkZombie(int index, int roomArray[][7])
 bool checkGrail(int index, int roomArray[][7])
 {
     return (roomArray[index][GRAIL_INDEX] == 1);
+}
+
+bool checkNearZombie(int index, int roomArray[][7])
+{
+    return (checkZombie((index + 1), roomArray[][7]) || checkZombie((index - 1), roomArray[][7]);
+
+}
+bool checkNearGrail(int index, int roomArray[][7])
+{
+    return (checkGrail((index + 1), roomArray[][7]) || checkGrail((index - 1), roomArray[][7]);
+
 }
