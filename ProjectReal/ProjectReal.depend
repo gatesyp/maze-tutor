@@ -1,0 +1,8 @@
+# depslib dependency file v1.0
+1480111440 source:d:\ryan\documents\projectreal\main.cpp
+	<iostream>
+	<fstream>
+	<cstdlib>
+	<ctime>
+	<cctype>
+
