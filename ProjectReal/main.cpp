@@ -63,7 +63,11 @@ void setup(int &currentRoom, int &zombieRoom, int &numBullets, int &numRooms, bo
 
 
 //PART 2 prototypes
+bool checkZombie(int index, int roomArray[][7]);
 
+bool checkGrail(int index, int roomArray[][7]);
+
+bool checkNearZombie()
 //PART 3 prototypes
 
 int main()
@@ -89,6 +93,7 @@ int main()
 
 	return 0;
 }
+
 
 int getRandomRoom(int gameArray[5])
 {
@@ -189,3 +194,12 @@ void readMaze(int roomArray[][7], int gameArray[5])
 
 }
 
+bool checkZombie(int index, int roomArray[][7])
+{
+    return (roomArray[index][ZOMBIE_INDEX] == 1);
+}
+
+bool checkGrail(int index, int roomArray[][7])
+{
+    return (roomArray[index][GRAIL_INDEX] == 1);
+}
